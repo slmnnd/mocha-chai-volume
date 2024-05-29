@@ -39,4 +39,16 @@ describe('menghitung volume limas segi empat', function(){
         //assert
         expect(hasil).to.be.equal(-50)
     })
+
+    //negative
+    it('menghitung volume dengan semua nilai 0', function(){
+        const Sisi1 = 0;
+        const Sisi2 = 0;
+        const Tinggi = 0;
+        const hasil = volume(Sisi1, Sisi2, Tinggi)
+        console.log(hasil)
+
+        //assert
+        expect(hasil).to.be.equal(0)
+    })
 })
