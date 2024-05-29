@@ -33,11 +33,13 @@ describe('menghitung volume limas segi empat', function(){
         const Sisi1 = 5;
         const Sisi2 = -5;
         const Tinggi = 6;
-        const hasil = volume(Sisi1, Sisi2, Tinggi)
-        console.log(hasil)
+
+        const hasil = function(){
+            volume(Sisi1, Sisi2, Tinggi)
+        }
 
         //assert
-        expect(hasil).to.be.equal(-50)
+        expect(hasil).to.throw('hasil tidak boleh negatif atau 0')
     })
 
     //negative
@@ -45,10 +47,13 @@ describe('menghitung volume limas segi empat', function(){
         const Sisi1 = 0;
         const Sisi2 = 0;
         const Tinggi = 0;
-        const hasil = volume(Sisi1, Sisi2, Tinggi)
-        console.log(hasil)
+
+        const hasil = function () {
+            volume(Sisi1, Sisi2, Tinggi)
+        }
+        
 
         //assert
-        expect(hasil).to.be.equal(0)
+        expect(hasil).to.throw('hasil tidak boleh negatif atau 0')
     })
 })

@@ -5,6 +5,7 @@ if(Tinggi === undefined || Tinggi === null) throw 'parameter harus diisi'
 
 
 const result = ((Sisi1 * Sisi2) * Tinggi)/3
+if (result <= 0) throw 'hasil tidak boleh negatif atau 0'
 return result
 }
 
